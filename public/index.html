@@ -3,6 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <title>MP3 Starter</title>
 
     <!-- Stylesheets -->
@@ -10,20 +15,22 @@
 </head>
 
 <body ng-app="mp3">
-
-    <!-- <div ng-view></div> -->
-
-    <!-- DELETE following div and UNCOMMENT the previous one -->
-    <div class="row text-center">
-        <h1>Welcome to MP3!</h1>
-        <img src="http://lorempixel.com/400/200/cats"/>
-        <p> The installation and setup worked out for you. That is commendable.
-            To reward you for your efforts, here is a picture of a cat. However,
-            this is not the page you want. To get started on using your partials,
-            delete this particular div and, instead, uncomment the div given
-            in your index.html and implement your Angular routes in source_js/app.js .
-        </p>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">IMDB Top 250 Movies</a>
     </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href = "#/list">Search</a></li>
+      <li><a href = "#/gallery">Gallery</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+   <div ng-view></div> 
+
+  
 
     <!-- Angular Scripts -->
     <!-- NOTE: removing the ".min." can help debugging in the console-->

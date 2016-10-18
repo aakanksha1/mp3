@@ -1,0 +1,34 @@
+<div ng-controller="detailsController">
+
+<!--http://jsfiddle.net/zeck/L8Snx/-->
+
+   	<a href="#/list/{{ prevrank }}" class="button" id = "previous"> ← </a>
+   	<a href="#/list/{{ nextrank }}" class="button" id = "next"> → </a>
+
+   	<div class="well well-lg" id = "welldet">
+
+	<div class="details">
+	<div class = "heading">
+		<h3>{{ movie.title }}</h3>
+		<strong>Rank:</strong> #{{ movie.rank }}<br>
+		<strong>Rated:</strong> {{ movie.rated }} <br>
+			 <strong>Released:</strong> {{ movie.released }} <br>
+			 <strong>Runtime:</strong>{{ movie.runtime }}<br>
+			 <strong>IMDb Rating:</strong> {{ movie.imdbRating }} / 10<br>
+	</div>
+		<div class="left">
+			<img ng-src="./data/images/{{ movie.imdbID }}.jpg" id = "detimg"/><br>
+		</div>
+
+		<div class="rightdet">
+
+			 <i>{{ movie.plot }}</i><br><br>
+			  {{ movie.awards }} <br>
+
+		</div>
+
+	</div>
+
+
+</div>
+</div>

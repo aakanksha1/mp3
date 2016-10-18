@@ -1,0 +1,45 @@
+<div ng-controller="listController">
+
+
+
+<div class="well well-lg" id = "welllist">
+<div class = "row">
+<div class="col-md-2">	
+    <label class = "movie">Search</label>
+    <input ng-model="inputText" class = "input">
+ </div>	
+
+<div class="col-md-2" id = "sortorder">
+	Sort By: <select data-ng-options="option.name for option in options" data-ng-model="selectedOption"></select>
+	Order: <select data-ng-options="direction.name for direction in directions" data-ng-model="selectedOrder"></select>
+</div>
+</div>
+</div>
+
+<!--http://stackoverflow.com/questions/17480526/angularjs-filter-exact-match-->
+	<div class="searchResults">
+	<div class = "result" ng-repeat="movie in movies | filter:inputText | orderBy:selectedOption.id:selectedOrder.id">
+	<div class = "overall">
+	  	<a href = "#/list/{{ movie.rank }}">
+		  	<div class="left">
+				<img ng-src="./data/images/{{ movie.imdbID }}.jpg" id ="movieimg"/>
+			</div>
+		</a>
+
+			<div class="right">
+			    <b>{{movie.title}}</b>
+			    Rank: #{{ movie.rank }}
+			</div>
+		
+		</div>
+	  </div>
+
+	</div>  
+
+
+
+
+
+
+
+</div>

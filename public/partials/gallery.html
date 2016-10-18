@@ -1,0 +1,23 @@
+<div ng-controller="galleryController">
+
+
+<div class="genres">
+  
+    <div class="container">
+        <div class="btn-group" id = "btngallery">
+            <a ng-click="filters.genre = ''" class="btn btn-info" role="button">All</a>
+            <div class="grp" ng-repeat="genre in genres"> 
+            <a ng-click="filters.genre = genre" class="btn btn-info" role="button">{{genre}}</a>   
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gallery">
+    <div ng-repeat="movie in movies | filter:filters" id = "movielist" > 
+        <a href = "#/list/{{ movie.rank }}"> <img ng-src="../data/images/{{ movie.imdbID }}.jpg" id = "gallimg"/> </a>
+    </div>
+</div>
+
+
+    </div>
