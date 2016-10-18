@@ -3,7 +3,7 @@ app.controller('listController', ['$scope', '$http', function($scope, $http) {
 /*http://stackoverflow.com/questions/28917819/how-to-set-the-sorting-order-asc-desc-of-an-array-based-on-dynamically-selecte*/
     $scope.inputText = 'Enter a Movie Name';
     $scope.options = [{ name: 'Title', id: 'title' }, { name: 'Rank', id: 'rank' }];
-    $scope.directions = [{ name: 'Ascending', id: true }, { name: 'Descending', id: false }];    
+    $scope.directions = [{ name: 'Ascending', id: false }, { name: 'Descending', id: true }];    
     $scope.selectedOption = $scope.options[0];
     $scope.selectedOrder = $scope.directions[0];
 
