@@ -15,7 +15,7 @@
 
 <div class="gallery">
     <div ng-repeat="movie in movies | filter:filters" id = "movielist" > 
-        <a href = "#/list/{{ movie.rank }}"> <img ng-src="../data/images/{{ movie.imdbID }}.jpg" id = "gallimg"/> </a>
+        <a href = "#/list/{{ movie.rank }}"> <img ng-src="./data/images/{{ movie.imdbID }}.jpg" id = "gallimg"/> </a>
     </div>
 </div>
 
